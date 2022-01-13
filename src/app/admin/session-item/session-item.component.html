@@ -1,0 +1,13 @@
+<h2> {{session.name}}</h2>
+<div [align]="alignemnt">{{session.track}}</div>
+<div>prevu le{{session.date}} pendant {{session.duree}} jours à {{session.local}}</div>
+<div>{{session.participants}} Participants</div>
+<div class="tools">
+<a class="delete"  (click)="onDelete()" >
+supression
+</a>
+<a [routerLink]="['../edit', session.id]"
+routerLinkActive="active" class="inscrire">
+Modification
+</a>
+</div>
